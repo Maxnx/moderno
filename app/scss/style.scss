@@ -240,8 +240,8 @@
 			display: inline-block;
 			margin-left: 3px;
 			margin-right: 3px;
-			&.slick-active{
-				button{
+			&.slick-active {
+				button {
 					background-color: $green;
 				}
 			}
@@ -261,72 +261,72 @@
 //End Product Slider
 
 //Start advantages
-.advantages{
+.advantages {
 	background-color: $bg;
 	padding: 110px 0;
 }
-.advantages__title{
+.advantages__title {
 	color: #fff;
 }
-.advantages__inner{
+.advantages__inner {
 	display: flex;
 	justify-content: space-between;
 }
-.advantages__item{
+.advantages__item {
 	padding: 0 15px;
-		max-width: 370px;
-		text-align: center;
-		 
-		&:hover{
-			.advantages__item-images{
-				background-color: $green;
-				transition: all .3s;
-				svg{
-					color: #fff;
-					transition: all .1s;
-				}
-			}
-			.advantages__item-title{
-		    color: $green;
-				transition: all .3s;
+	max-width: 370px;
+	text-align: center;
+
+	&:hover {
+		.advantages__item-images {
+			background-color: $green;
+			transition: all 0.3s;
+			svg {
+				color: #fff;
+				transition: all 0.1s;
 			}
 		}
-		&-images{
-			width: 114px;
-			height: 114px;
-			background-color: #fff;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin: 0 auto 30px;
-		  svg{
-				color: #000;
-			}
+		.advantages__item-title {
+			color: $green;
+			transition: all 0.3s;
 		}
-		&-title{
-			font-size: 24px;
-			margin-bottom: 25px;
-			color: #fff;
-			@include f500;
+	}
+	&-images {
+		width: 114px;
+		height: 114px;
+		background-color: #fff;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto 30px;
+		svg {
+			color: #000;
 		}
-		&-text{
-			font-size: 15px;
-		}
+	}
+	&-title {
+		font-size: 24px;
+		margin-bottom: 25px;
+		color: #fff;
+		@include f500;
+	}
+	&-text {
+		font-size: 15px;
+	}
 }
 
 //end advantages
 
 //Start Author block
-.author{ 
-	background-position:  top center;
+.author {
+	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 750px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	&__box{
+	&__box {
 		max-width: 650px;
 		min-height: 215px;
 		display: flex;
@@ -335,17 +335,17 @@
 		background-color: $green;
 		width: 100%;
 	}
-	&__title{
+	&__title {
 		font-size: 30px;
 		line-height: 36px;
 		color: #fff;
 		margin-right: 45px;
 		max-width: 262px;
-		span{
+		span {
 			@include f700;
 		}
 	}
-	&__link{
+	&__link {
 		font-size: 18px;
 		line-height: 36px;
 		padding: 14px 40px;
@@ -355,33 +355,184 @@
 //End Author block
 
 //Start tutorial
-.tutorial{
+.tutorial {
 	padding: 70px 0 120px;
-	&__inner{
+	&__inner {
 		display: flex;
 		justify-content: space-between;
 	}
-	&__item{
+	&__item {
 		max-width: 370px;
 		width: 100%;
 	}
 }
-.tutorial__item{
-	&-images{
+.tutorial__item {
+	&-images {
 		min-height: 270px;
 		background-repeat: no-repeat;
 		background-position: center;
-		background-size: cover; 
+		background-size: cover;
 	}
-	&-title{
+	&-title {
 		background-color: #f8f8f8;
 		font-size: 24px;
 		text-align: center;
 		@include f700;
 		padding: 30px 10px;
 		color: $bg;
-		
 	}
 }
 
 //End tutorial
+
+//Start footer
+.footer {
+	background-color: $bg;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		padding: 100px 0 80px;
+	}
+}
+.footer__copy-text {
+	text-align: center;
+	font-size: 15px;
+	color: #919699;
+	padding: 25px 0 25px;
+}
+.footer__copy {
+	border-top: 1px solid #424d53;
+}
+.footer__col {
+	max-width: 270px;
+	width: 100%;
+	&-menu {
+		max-width: 220px;
+	}
+	&-title {
+		font-family: "Raleway", sans-serif;
+		font-size: 22px;
+		color: #fff;
+		padding-bottom: 30px;
+		margin-bottom: 30px;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 2px;
+			width: 51px;
+			height: 3px;
+			background-color: $green;
+		}
+	}
+	&-text {
+		color: #b7c3c8;
+		margin-bottom: 30px;
+	}
+}
+.footer__info {
+	margin-top: 18px;
+	@include f500;
+	color: #fff;
+	padding-left: 30px;
+	position: relative;
+	&::before {
+		content: "\f041";
+		font-family: "icomoon";
+		color: $green;
+		font-size: 18px;
+		position: absolute;
+		left: 0;
+	}
+	&-phone {
+		&::before {
+			content: "\f095";
+		}
+	}
+}
+
+.footer__col-list {
+	a {
+		padding-left: 22px;
+		margin-bottom: 15px;
+		color: #b7c3c8;
+		position: relative;
+		&::before {
+			content: "\f105";
+			color: $green;
+			position: absolute;
+			left: 0;
+			font-size: 18px;
+			font-family: "icomoon";
+		}
+	}
+}
+
+.footer__social-link {
+	margin-bottom: 33px;
+	li {
+		display: inline-block;
+		& + li {
+			margin-left: 7px;
+		}
+	}
+	a {
+		width: 28px;
+		height: 28px;
+		background-image: url(../images/css_sprites.png);
+	}
+}
+
+.link-twitter {
+	background-position: -28px 0;
+}
+.link-youtube {
+	background-position: 0 -28px;
+}
+.link-pinterest {
+	background-position: -28px -28px;
+}
+.link-linkedin {
+	background-position: -56px 0;
+}
+.footer__form-title {
+	margin-bottom: 15px;
+	color: #fff;
+	font-size: 20px;
+}
+.footer__form {
+	position: relative;
+	input {
+		border: none;
+		background-color: #2f3c43;
+		display: block;
+		width: 100%;
+		height: 40px;
+		color: #fff;
+		font-size: 14px;
+		padding-left: 13px;
+		padding-right: 50px;
+		&::placeholder {
+			color: #697378;
+		}
+	}
+	button {
+		position: absolute; 
+		right: 0;
+		bottom: 0;
+		background-color: $green;
+		border: none;
+		height: 40px;
+		width: 43px;
+		cursor: pointer;
+		&::after{
+			content: "\f124";
+			font-family: 'icomoon';
+			font-size: 20px;
+			color: #fff;
+			
+		}
+	}
+}
+//End footer
