@@ -38,6 +38,7 @@ body {
 }
 .content {
 	flex: 1 0 auto; 
+	background-color: #f4f6f5;
 }
 .footer {
 	flex: 0 0 auto;
@@ -63,7 +64,13 @@ body {
 		padding: 0 15px;
 	}
 }
-
+.page-search{
+	min-height: 230px !important;
+	.search__inner{
+		padding-top: 60px;
+		padding-bottom: 70px;
+	}
+}
 .page-content {
 	background-color: $grey;
 }
