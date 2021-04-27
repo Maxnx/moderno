@@ -1,12 +1,18 @@
 html {
 	box-sizing: border-box;
-	height: 100%;
 }
 
 *,
 *::before,
 *::after {
 	box-sizing: inherit;
+}
+
+html,
+body{
+	height: 100%;
+	position: relative;
+	overflow-x: hidden;
 }
 
 a {
@@ -23,13 +29,11 @@ li {
 }
 
 body {
-	height: 100%;
 	font-family: "Roboto", sans-serif;
 	font-size: 15px;
 	line-height: 24px;
 	font-weight: 400;
 	color: $text;
-	overflow-x: hidden;
 }
 .wrapper {
 	display: flex;
