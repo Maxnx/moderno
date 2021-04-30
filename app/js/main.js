@@ -1,26 +1,59 @@
 $(function () {
 
+  $('.product-slider__inner').slick({
+    dots: true,
+    arrows: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1441,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 801,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+ 
   $(".rate-star").rateYo({
     rating: 3.6,
     starWidth: "12px",
     readOnly: true
   });
 
-  $(".product-slider__inner").slick({
-    dots: true,
-    arrows: false,
-    slidesToShow: 4,
-    slidesToScroll: 4
-  });
-
-  $("js-range-slider").ionRangeSlider({
+  $(".js-range-slider").ionRangeSlider({
     type: "double",
+    skin: "round",
     min: 0,
     max: 1000,
     from: 0,
     to: 600,
     prefix: "$"
   });
+
+
 
   $('.icon-th-list').on('click', function () {
     $('.product__item').addClass('list');
